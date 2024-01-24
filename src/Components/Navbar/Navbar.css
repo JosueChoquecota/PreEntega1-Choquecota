@@ -1,0 +1,22 @@
+
+
+.nav-item.active .nav-link {
+    font-weight: bold;
+}
+
+.navbar-logo {
+    width: 70px; 
+    height: auto; 
+}
+
+.navbar-nav .nav-item {
+    margin-right: 38px;
+}
+
+.carrito-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+
