@@ -1,0 +1,84 @@
+ [
+    {
+      "id":1,
+      "name": "Zapatilla 1",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/421756b633a84c3580a4ae8901801435_9366/Zapatillas_adidas_Grand_Court_Cloudfoam_Comfort_Negro_GW9196_01_standard.jpg",
+      "description": "Diseñadas para brindar un retorno de energía sin límites en cada paso, las zapatillas Adidas Ultraboost ofrecen una combinación perfecta de comodidad y rendimiento.",
+      "categoria": "calzado",
+      "stock": 10,
+      "precio": 65
+    },
+    {
+      "id":2,
+      "name": "Zapatilla 2",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/13c50730c9c54ccabfffaf4f0080ac0c_9366/Zapatillas_adidas_Grand_Court_Lifestyle_para_Tenis_con_Cordones_Negro_FZ6159_01_standard.jpg",
+      "description": "Clásicas y atemporales, las zapatillas Adidas Stan Smith son un ícono de estilo tanto en el mundo del deporte como en la moda urbana.",
+      "categoria": "calzado",
+      "stock": 8,
+      "precio": 70
+    },
+    {
+      "id":3,
+      "name": "Zapatilla 3",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/98da6e46c37b43199652ace2001df3d2_9366/Zapatillas_Forum_Low_Blanco_FY7986_01_standard.jpg",
+      "description": "Con su diseño icónico de puntera de goma y su estilo retro, las zapatillas Adidas Superstar son una declaración de moda por derecho propio.",
+      "categoria": "calzado",
+      "stock": 6,
+      "precio": 80
+    },
+    {
+      "id":4,
+      "name": "Camiseta 1",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a04f17bfb34b43b0941bada000e4a060_9366/Camiseta_Entrada_22_Negro_H57497_01_laydown.jpg",
+      "description": "'lorem...'",
+      "categoria": "camiseta",
+      "stock": 10,
+      "precio": 65
+    },
+    {
+      "id":5,
+      "name": "Camiseta 2",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/84d367540aba4426a172ac4600f9343e_9366/Camiseta_de_Entrenamiento_Tiro_21_Azul_GM7585_01_laydown.jpg",
+      "description": "lorem...",
+      "categoria": "camiseta",
+      "stock": 9,
+      "precio": 50
+    },
+    {
+      "id":6,
+      "name": "Camiseta 3",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/dc465f90b21649278ce7a80f0072dc15_9366/Camiseta_Entrada18_Azul_CF1037_01_laydown.jpg",
+      "description": "lorem...",
+      "categoria": "camiseta",
+      "stock": 9,
+      "precio": 40
+    },
+    {
+      "id":7,
+      "name": "Pantalones 1",
+      "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0b106be0fa784731b291a494794744fe_9366/Pantalon_Deportivo_Adicolor_Classics_SST_Negro_IL2488_21_model.jpg",
+      "description": "'lorem...'",
+      "categoria": "pantalon",
+      "stock": 5,
+      "precio": 25
+    },
+    {
+      "id":8,
+      "name": "Pantalones 2",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/aaed5950da834967b749aef400a8bdc8_9366/Pantalon_de_Entrenamiento_Tiro_23_League_Azul_HS3492_21_model.jpg",
+      "description": "lorem...",
+      "categoria": "pantalon",
+      "stock": 12,
+      "precio": 35
+    },
+    {
+      "id":9,
+      "name": "Pantalones 3",
+      "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/c9248b4822b24c61a8f4af4600fa5b6d_9366/Pantalon_AEROREADY_Essentials_3_Tiras_Pierna_Conica_Puno_Ajustado_Negro_IC0041_21_model.jpg",
+      "description": "lorem...",
+      "categoria": "pantalon",
+      "stock": 5,
+      "precio": 30
+    }
+  ]
+  
