@@ -5,7 +5,7 @@ Este es mi proyecto de una tienda de ventas de prendas de la marca Adidas
 
 ## Como instalar el proyecto:
 
-1.-Clona este repositorio: git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/JosueChoquecota/PreEntega2-Choquecota.git)
+1.-Clona este repositorio: git clone https://github.com/JosueChoquecota/PreEntega2-Choquecota.git
 2.-Instala las dependencias: npm install
 3.-Inicia la aplicación: npm run dev
 
