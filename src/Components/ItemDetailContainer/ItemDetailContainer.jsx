@@ -1,52 +1,28 @@
-import { useEffect, useState } from "react";
-import productoJSON from '../productos.json'
-import { useParams } from "react-router-dom";
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import Contador from "./Contador";
-
+import React, { useEffect, useState } from 'react';
+import ItemDetail from './ItemDetail';
+import Carga from './Carga';
+import {getFirestore, getDoc, doc} from "firebase/firestore";
+import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState(null);
-    const { id } = useParams();
-    
-    useEffect(() => {
-        const obtenerProducto = () => {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    const encontrarProducto = productoJSON.find(producto => producto.id === parseInt(id));
-                    resolve(encontrarProducto);
-                }, 1000);
-            });
-        };
+    const [producto, setProducto] = useState([]);
+    const {id} = useParams()
 
-        obtenerProducto().then(producto => {
-            setProducto(producto);
-        });
-    }, [id]);
+    useEffect(() => {
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb,"1", id);
+
+        getDoc(queryDoc)
+        .then(res => setProducto({id: res.id, ...res.data() }))
+    }, [id])
+        
 
     return (
         <div className="mt-4">
             {producto ? (
-            <Container className="bg-light p-4 rounded">
-            <Row>
-              <Col xs={6}>
-                <Image src={producto.img} thumbnail />
-              </Col>
-              <Col xs={6}>
-                <h1>{producto.name}</h1>
-                <p>{producto.description}</p>
-                <h2>Precio: S/ {producto.precio}</h2>
-                <p>Stock: {producto.stock}</p>
-                <p>Categoria: {producto.categoria}</p>
-                <button className="bg-white rounded px-4 py-2 shadow-sm">
-                    Agregar al carrito
-                </button>
-                <Contador/>
-              </Col>
-            </Row>
-          </Container >
+                <ItemDetail producto={producto} />
             ) : (
-            <p>Cargando...</p>
+                <Carga />
             )}
         </div>
     );

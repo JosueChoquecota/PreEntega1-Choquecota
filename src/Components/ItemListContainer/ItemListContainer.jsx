@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './Itemlist';
-import productosJSON from '../productos.json';
 import { Link, useParams } from 'react-router-dom';
+import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
 
-function asyncMock(categoryId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if(categoryId === undefined) {
-        resolve(productosJSON); 
-      } else {
-        const productosFiltrados = productosJSON.filter((item) => {
-          return item.categoria === categoryId;
-        });
-        resolve(productosFiltrados);
-      }  
-    }, 1000);
-  });
-}
+
+
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams();
   const [productosState, setProductosState] = useState([]); 
+  const { categoryId } = useParams();
 
-  useEffect(() => {
-    asyncMock(categoryId).then((res) => setProductosState(res)); 
-  }, [categoryId]);
+ 
+    useEffect(() => {
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, "1");
+
+        
+        if(categoryId) {
+          const queryFilter = query(queryCollection, where("categoria", "==", categoryId));
+          getDocs(queryFilter).then(res => setProductosState(res.docs.map(product => ({id: product.id, ...product.data()}))))
+        } 
+        else {
+          getDocs(queryCollection).then(res => setProductosState(res.docs.map(product => ({id: product.id, ...product.data()}))))
+        }
+
+    }, [categoryId]) 
+
 
   return (
     <main>
       <section className='item-list-container'>
-      <ItemList products={productosState}/>
+      <ItemList products={productosState}/> 
       </section>
     </main>
   );

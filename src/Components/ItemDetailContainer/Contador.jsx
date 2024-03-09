@@ -1,17 +1,20 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-const Contador = () => {
-    const [contador, setContador] = useState(0);
+const Contador = ({ valorInicial, cambioDeValor, stock }) => {
+    const [contador, setContador] = useState(valorInicial);
 
     const sumar = () => {
-            setContador(contador + 1);
-           
-    };
-    const restar = () => {
-        if (contador > 0) { 
-            setContador(contador - 1);
+        if (contador < stock) {
+            setContador(contador => Math.min(contador + 1, stock));
+            cambioDeValor(contador => Math.min(contador + 1, stock));
         }
-    
+    };
+
+    const restar = () => {
+        if (contador > 1) {
+            setContador(contador => Math.max(contador - 1, 1));
+            cambioDeValor(contador => Math.max(contador - 1, 1));
+        }
     };
 
     return (
@@ -22,4 +25,5 @@ const Contador = () => {
         </div>
     );
 };
-export default Contador
+
+export default Contador;

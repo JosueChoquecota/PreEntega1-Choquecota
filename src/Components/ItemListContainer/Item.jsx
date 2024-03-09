@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 const Item = ({product}) => {
+
   return (
     <div className=" d-flex justify-content-center mt-3">
       <Card style={{ width: '18rem' }}>
